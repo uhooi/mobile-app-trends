@@ -2,6 +2,8 @@
 
 モバイルアプリ開発のトレンドを3ヶ月ごとに紹介します。
 
+## 目次
+
 - 2021
   - [FY2021 4Q](./2021/2021_4q.md)
   - [FY2021 3Q](./2021/2021_3q.md)
@@ -11,3 +13,11 @@
     - [Google I/O 2021](./2021/google_io_2021.md)
 - 2020
   - [FY2020 4Q](./2020/2020_4q.md)
+
+## 作者
+
+[![Twitter](https://img.shields.io/twitter/follow/the_uhooi?style=social)](https://twitter.com/the_uhooi)
+
+## お問い合わせ
+
+何かありましたらIssueやPRを作成するか、作者のTwitterまでお問い合わせください。
