@@ -2,7 +2,7 @@
 
 ## 概要
 
-Google I/O 2021（05/18 - 05/20）の発表について紹介します。
+Google I/O 2021（05/18 - 05/20）の発表内容を紹介します。
 
 - https://events.google.com/io/?lng=ja
 
