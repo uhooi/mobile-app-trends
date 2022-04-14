@@ -4,7 +4,7 @@
 
 Google I/O 2021（05/18 - 05/20）の発表内容を紹介します。
 
-- https://events.google.com/io/?lng=ja
+- https://io.google/2021/?lng=ja
 
 ## Android 12
 
