@@ -51,6 +51,21 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - デフォルトでは、ナビゲーションバーは表示するコンテンツがある場合のみレンダリングされる
   - ナビゲーションバーにタイトル、ツールバーアイテムまたは検索コンテンツがない場合、自動的に非表示になる
   - 空のナビゲーションバーを表示するには、 [navigationBarHidden(\_:)](https://developer.apple.com/documentation/SwiftUI/View/navigationBarHidden(_:)) または新しい `.toolbar(.visible)` 修飾子を使う
+- `list` がセクションフッターに対応した
+- `toolbar` 修飾子が複数の階層で適用されている場合、同じ配置を持つ親のアイテムに子のアイテムが追加されるようになった
+- `.windowResizability(.contentSize)` を使う場合、SwiftUIで作成されたウィンドウはそのコンテンツのサイズに基づいて、リサイズ可能でフルスクリーンなフラグを設定する
+- [HorizontalEdge.leading](https://developer.apple.com/documentation/SwiftUI/HorizontalEdge/leading) と [HorizontalEdge.trailing](https://developer.apple.com/documentation/SwiftUI/HorizontalEdge/trailing) のアラインメントガイドを使い、 [List](https://developer.apple.com/documentation/SwiftUI/List) セパレータのインセットをカスタマイズできるようになった
+- __`list` の実装に [UITableView](https://developer.apple.com/documentation/uikit/uitableview) を使わなくなった__
+- SwiftUIは、ビューとビューコントローラーのrepresentableが値型であることを実行時に強制するようになった
+- シンボル画像は、デフォルトで自動的に決定されたシンボルレンダリングモードを使うようになった
+  - シンボル画像を常にモノクロでレンダリングする場合、 [SymbolRenderingMode](https://developer.apple.com/documentation/SwiftUI/SymbolRenderingMode) 修飾子を使う
+- `list` 内のメニュースタイルを持つピッカーは、デフォルトでその `label` を表示する
+  - `label` を非表示にする場合、 `Hidden()` 修飾子を使う
+- `list` 内のピッカーは、デフォルトでメニュースタイルになる
+- `text` と `image` ビューの変更は、デフォルトでアニメーションされるようになった
+  - アニメーションを無効にする場合、 `.contentsTransition(.identity)` を使う
+- リストとフォームでは、スクロールジェスチャーが開始されると、ソフトウェアキーボードを自動的に閉じる
+  - 以前の動作に戻す場合、 `.scrollDismissesKeyboard(.never)` を使う
 
 ## Conclusion
 
