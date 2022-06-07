@@ -45,7 +45,12 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - [Axis.vertical](https://developer.apple.com/documentation/SwiftUI/Axis/vertical) を使うと、フォームのようにテキストが短～中程度の長さになることが想定されるコンテキストで複数行のレンダリングを行える
   - 長文のテキスト編集は、引き続き [TextEditor](https://developer.apple.com/documentation/SwiftUI/TextEditor) を使う
 - ナビゲーションバーに新しいデフォルトの動作が追加された
-  - TBD
+  - タイトルが提供されない場合、インラインタイトル表示モードがデフォルトになる
+  - タイトルが提供される場合、デフォルトはラージのまま
+  - [navigationBarTitleDisplayMode(\_:)](https://developer.apple.com/documentation/SwiftUI/View/navigationBarTitleDisplayMode(_:)) 修飾子を使うと、デフォルトを変更できる
+  - デフォルトでは、ナビゲーションバーは表示するコンテンツがある場合のみレンダリングされる
+  - ナビゲーションバーにタイトル、ツールバーアイテムまたは検索コンテンツがない場合、自動的に非表示になる
+  - 空のナビゲーションバーを表示するには、 [navigationBarHidden(\_:)](https://developer.apple.com/documentation/SwiftUI/View/navigationBarHidden(_:)) または新しい `.toolbar(.visible)` 修飾子を使う
 
 ## Conclusion
 
