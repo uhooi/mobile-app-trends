@@ -33,7 +33,13 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 ## Xcode 14
 
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
-- TBD
+- macOS 12.4+
+- __単一のターゲットで複数のプラットフォームに対応__ した
+  - 特定のプラットフォーム向けの依存関係、コード、リソース、ビルド設定を条件付きで含められる
+- iPadOS向けのDriverKitドライバーの開発に対応した
+- WatchKit AppとWatchKit App Extensionターゲットを単一のWatchKit Appターゲットに組み合わせた、watchOSアプリ向けの新しいデフォルトのテンプレートが追加された
+  - コード、アセット、ローカライズの管理がシンプルになった
+  - 単一ターゲットのwatchOSアプリはwatchOS 7+にデプロイできる
 
 ## SwiftUI
 
