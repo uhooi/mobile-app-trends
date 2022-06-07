@@ -22,7 +22,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 - TBD
 
-## macOS 
+## macOS Ventura
 
 - TBD
 
