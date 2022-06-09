@@ -48,9 +48,20 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - 縦軸が並列度のレベル、横軸が時間を表し、色付きのブロックのグリッドとしてイベントを表示する
 - __Swiftターゲットの依存関係と並行してターゲットをコンパイルできるようになった__
 - `EAGER_LINKING` ビルド設定が追加された
-  - TBD
+  - ビルドの並列化を向上させる
 - `FUSE_BUILD_SCRIPT_PHASES` ビルド設定が追加された
-  - TBD
+  - 異なるビルドフェーズからタスクを並行して実行する
+  - 入出力の依存関係が順序を強制しない場合に使う
+  - run script build phasesで指定する
+- 推奨する最小デプロイメントターゲットのビルド設定が追加された  
+  - `RECOMMENDED_MACOSX_DEPLOYMENT_TARGET`
+  - `RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET`
+  - `RECOMMENDED_TVOS_DEPLOYMENT_TARGET`
+  - `RECOMMENDED_WATCHOS_DEPLOYMENT_TARGET`
+  - `RECOMMENDED_DRIVERKIT_DEPLOYMENT_TARGET`
+- `ENABLE_USER_SCRIPT_SANDBOXING` ビルド設定が追加された
+  - shell script build phasesでサンドボックス化できるようになった
+  - ファイルアクセスをホワイトリスト化する
 
 ## SwiftUI
 
