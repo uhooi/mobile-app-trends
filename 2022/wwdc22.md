@@ -302,6 +302,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
 - https://github.com/apple/swift-package-manager/blob/3d215a5d7642c7d2bf6daf2662e978c57271ae3e/CHANGELOG.md#swift-57
 - `moduleAliases` が追加された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0339-module-aliasing-for-disambiguation.md
   - モジュールに別名を付けることで、モジュール名の衝突を回避できる
   - 例  
     ```swift
@@ -324,6 +325,9 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     ```
 - XcodeでSwiftパッケージコマンドプラグインを使えるようになった
   - 「File > Packages」から使える
+- `--disable-testable-imports` フラグを追加した
+  - https://github.com/apple/swift-package-manager/pull/4119
+  - `@testable import` を無効にする
 
 ## SwiftUI
 
