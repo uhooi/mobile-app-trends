@@ -215,6 +215,20 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     extension Graph<Int, String> { ... }
     func build() -> some Graph<Int, String> { ... } // !!!: `where` を使って書けない
     ```
+- TBD
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0353-constrained-existential-types.md
+- __関数の引数に `some` が使えるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0341-opaque-parameters.md
+  - 例  
+    ```swift
+    // Before
+    func horizontal<V1: View, V2: View>(_ v1: V1, _ v2: V2) -> some View { ... }
+    
+    // After
+    func horizontal(_ v1: some View, _ v2: some View) -> some View { ... }
+    ```
+- TBD
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md
 
 ## SwiftUI
 
