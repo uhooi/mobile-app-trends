@@ -228,6 +228,14 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     // After
     func horizontal(_ v1: some View, _ v2: some View) -> some View { ... }
     ```
+- __関数の戻り値の構造的な位置で `some` が使えるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0328-structural-opaque-result-types.md
+  - 例  
+    ```swift
+    func someDictionary() -> [some Hashable: some Codable] {
+        [ 1: "One", 2: "Two" ]
+    }
+    ```
 - TBD
   - https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md
 - __`if-let` 構文を省略して書けるようになった__
@@ -259,7 +267,9 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - https://github.com/apple/swift-evolution/blob/main/proposals/0329-clock-instant-duration.md
   - 時計を表す `Clock` プロトコル
   - 時間のインスタンスを定義するための `InstantProtocol` プロトコル
-  - TBD
+  - 2つの `InstantProtocol` 型の間の経過時間を定義するための `DurationProtocol` プロトコル
+  - 一般的に使われる `Clock` 型は `SuspendingClock` 型と `ContinuousClock` で、システムの最も基本的なクロックを表している
+    - `SuspendingClock` 型はマシンが停止している間は進行しないが、 `ContinuousClock` 型はマシンの状態に関係なく進行する 
 
 ## SwiftUI
 
