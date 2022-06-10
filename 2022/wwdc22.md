@@ -122,7 +122,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 ## Swift 5.7
 
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
-- https://github.com/apple/swift/blob/main/CHANGELOG.md#swift-57
+- https://github.com/apple/swift/blob/6cc83594604e1a11f3bdece5ad6a4370e8c0dee3/CHANGELOG.md#swift-57
 - 標準ライブラリに `Regex<Output>` 型と正規表現リテラル、新しい文字列処理アルゴリズムが追加された
   - https://github.com/apple/swift-evolution/blob/main/proposals/0355-regex-syntax-run-time-construction.md
   - https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md
