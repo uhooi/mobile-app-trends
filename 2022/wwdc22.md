@@ -271,7 +271,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - 一般的に使われる `Clock` 型は `SuspendingClock` 型と `ContinuousClock` で、システムの最も基本的なクロックを表している
     - `SuspendingClock` 型はマシンが停止している間は進行しないが、 `ContinuousClock` 型はマシンの状態に関係なく進行する 
 
-## Swiftパッケージ
+## Swift Package Manager
 
 - `moduleAliases` が追加された
   - モジュールに別名を付けることで、モジュール名の衝突を回避できる
