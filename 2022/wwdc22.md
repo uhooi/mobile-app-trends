@@ -101,7 +101,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 - ローカライズのためにローカルのSwiftパッケージをエクスポートできるようになった
   - プロジェクトまたはワークスペースに含まれるすべてのプロジェクトとSwiftパッケージの単一のローカリゼーションカタログを生成する
-  - xcodebuild` コマンドに `-importLocalizations` と `-exportLocalizations` でSwiftパッケージをインポートまたはエクスポートできる
+  - `xcodebuild` コマンドに `-importLocalizations` と `-exportLocalizations` でSwiftパッケージをインポートまたはエクスポートできる
 
 ### シミュレーター
 
