@@ -113,6 +113,10 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 - TBD
 
+## Swift 5.7
+
+- TBD
+
 ## SwiftUI
 
 - https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes
