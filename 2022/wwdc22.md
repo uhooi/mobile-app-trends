@@ -245,6 +245,20 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - 非同期コンテキストから宣言を使えない
 - トップレベルのコードが非同期呼び出しに対応した
   - https://github.com/apple/swift-evolution/blob/main/proposals/0343-top-level-concurrency.md
+  - `@MainActor` で実行される
+- 分散アクターの導入により、分散プログラミングをネイティブに対応した
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0336-distributed-actor-isolation.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0344-distributed-actor-runtime.md
+  - `distributed actor` と `distributed func` を分散アクターの内部で定義できるようになった
+  - 分散アクター内のストアドプロパティは外部から参照できない
+  - 分散関数は潜在的なネットワーク接続を考慮し、暗黙的に `async` かつ `throws` となる
+- `actor` のイニシャライザ内でストアドプロパティへの危険なアクセスをコンパイラがチェックするようになった
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0327-actor-initializers.md
+  - TBD
+- 時間と時計を表す型が追加された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0329-clock-instant-duration.md
+  - 時計を表す `Clock` プロトコル
+  - 時間のインスタンスを定義するための `InstantProtocol` プロトコル
   - TBD
 
 ## SwiftUI
