@@ -218,6 +218,10 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     ```
 - TBD
   - https://github.com/apple/swift-evolution/blob/main/proposals/0353-constrained-existential-types.md
+- 標準ライブラリの様々なプロトコルで主要な関連型が定義された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0358-primary-associated-types-in-stdlib.md
+  - 例えば `Sequence` と `Collection` では単一の主要な関連型の `Element` が定義されている
+  - `some Collection<Int>` や `any Collection<Int>` のように書ける
 - __関数の引数に `some` が使えるようになった__
   - https://github.com/apple/swift-evolution/blob/main/proposals/0341-opaque-parameters.md
   - 例  
@@ -228,7 +232,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     // After
     func horizontal(_ v1: some View, _ v2: some View) -> some View { ... }
     ```
-- __関数の戻り値の構造的な位置で `some` が使えるようになった__
+- 関数の戻り値の構造的な位置で `some` が使えるようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0328-structural-opaque-result-types.md
   - 例  
     ```swift
