@@ -197,7 +197,8 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     ```
 - __プロトコルに山カッコで関連型を書けるようになった__
   - https://github.com/apple/swift-evolution/blob/main/proposals/0346-light-weight-same-type-syntax.md
-  - これにより、 `where` を使わずに制約を付けられるようになった
+  - これにより、 `where` を使わずに制約を付けられるようになってスッキリした
+  - `where` を使って実現できないことができるようになった
   - 例  
     ```swift
     protocol Graph<Vertex, Edge> { // !!!: ビルドエラーにならなくなった
