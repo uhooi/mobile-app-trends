@@ -195,9 +195,9 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     
     let boundary = solid.boundary()
     ```
-- プロトコルに山カッコで関連型を書けるようになった
+- __プロトコルに山カッコで関連型を書けるようになった__
   - https://github.com/apple/swift-evolution/blob/main/proposals/0346-light-weight-same-type-syntax.md
-  - `where` を使わずに制約を付けられる
+  - これにより、 `where` を使わずに制約を付けられるようになった
   - 例  
     ```swift
     protocol Graph<Vertex, Edge> { // !!!: ビルドエラーにならなくなった
