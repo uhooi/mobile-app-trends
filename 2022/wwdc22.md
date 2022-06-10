@@ -229,6 +229,22 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     ```
 - TBD
   - https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md
+- __`if-let` 構文を省略して書けるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0345-if-let-shorthand.md
+  - 例  
+    ```swift
+    // Before
+    if let foo = foo { ... }
+    
+    // After
+    if let foo { ... }
+    ```
+- `@available(*, noasync)` 属性が追加された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0340-swift-noasync.md
+  - 非同期コンテキストから宣言を使えない
+- トップレベルのコードが非同期呼び出しに対応した
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0343-top-level-concurrency.md
+  - TBD
 
 ## SwiftUI
 
