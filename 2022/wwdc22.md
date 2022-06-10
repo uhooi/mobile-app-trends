@@ -271,6 +271,32 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - 一般的に使われる `Clock` 型は `SuspendingClock` 型と `ContinuousClock` で、システムの最も基本的なクロックを表している
     - `SuspendingClock` 型はマシンが停止している間は進行しないが、 `ContinuousClock` 型はマシンの状態に関係なく進行する 
 
+## Swiftパッケージ
+
+- `moduleAliases` が追加された
+  - モジュールに別名を付けることで、モジュール名の衝突を回避できる
+  - 例  
+    ```swift
+    targets: [
+        .executableTarget(
+            name: "App",
+            dependencies: [
+                .product(
+                    name: "Game",
+                    package: "swift-game",
+                    moduleAliases: ["Utils": "GameUtils"]
+                ),
+                .product(
+                    name: "Utils",
+                    package: "swift-draw"
+                ),
+            ]
+        )
+    ]
+    ```
+- XcodeでSwiftパッケージコマンドプラグインを使えるようになった
+  - TBD
+
 ## SwiftUI
 
 - https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes
