@@ -299,6 +299,8 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 ## Swift Package Manager
 
+- https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
+- https://github.com/apple/swift-package-manager/blob/3d215a5d7642c7d2bf6daf2662e978c57271ae3e/CHANGELOG.md#swift-57
 - `moduleAliases` が追加された
   - モジュールに別名を付けることで、モジュール名の衝突を回避できる
   - 例  
