@@ -122,6 +122,79 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 ## Swift 5.7
 
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
+- 標準ライブラリに `Regex<Output>` 型と正規表現リテラル、新しい文字列処理アルゴリズムが追加された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0355-regex-syntax-run-time-construction.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0357-regex-string-processing-algorithms.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0350-regex-type-overview.md
+  - 例  
+    ```swift
+    // Initialization from a string
+    let pattern = "a[bc]+"
+    let regex = try! Regex(pattern)
+    
+    // Regex literal
+    let regex = #/a[bc]+/#
+    ```
+- 新しく追加された正規表現リテラルに対して「ベアスラッシュ」構文を有効にする
+  - 既存のコードがコンパイルされない可能性がある
+  - プロジェクトのビルド設定にある「Enable Bare Slash Regex Literals」チェック（ `SWIFT_ENABLE_BARE_SLASH_REGEX = NO` ）をOFFにして無効にすることもできる
+- 多くのトップレベルの位置に書き込まれたプレースホルダータイプのタイプを推測できるようになった
+  - 例
+    ```swift
+    func replaceMe() -> _ {
+        [42]
+    }
+    ```
+- `inout` からC言語のポインタへの変換がビルドエラーにならなくなった
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0324-c-lang-pointer-arg-conversion.md
+  - 例
+    ```swift
+    // C declaration:
+    // long read_long(const char *input);
+    
+    func test() -> Int {
+        var x = 3
+        return read_long(&x) // !!!: ビルドエラーにならなくなった
+    }
+    ```
+- プロトコルタイプの値を使用してジェネリック関数を呼び出すことができるようになった
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0352-implicit-open-existentials.md
+  - 例
+    ```swift
+    protocol P {
+        associatedtype A
+        func getA() -> A
+    }
+    
+    func takeP<T: P>(_ value: T) { }
+    
+    func test(p: any P) {
+        takeP(p) // !!!: ビルドエラーにならなくなった
+    }
+    ```
+- __ジェネリック関数で引数にデフォルト値を指定できるようになった__
+  - 例
+    ```swift
+    func compute<C: Collection>(_ values: C = [0, 1, 2]) { // !!!: ビルドエラーにならなくなった
+        // ...
+    }
+    ```
+- __連想型（ `associatedtype` ）を持つプロトコルを型として使えるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0309-unlock-existential-types-for-all-protocols.md
+  - 例
+    ```swift
+    protocol Surface {...}
+    
+    protocol Solid {
+        associatedtype SurfaceType: Surface
+        func boundary() -> SurfaceType
+    }
+    
+    let solid: any Solid = ... // !!!: ビルドエラーにならなくなった
+    
+    let boundary = solid.boundary()
+    ```
 - TBD
 
 ## SwiftUI
