@@ -195,7 +195,25 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     
     let boundary = solid.boundary()
     ```
-- TBD
+- プロトコルに山カッコで関連型を書けるようになった
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0346-light-weight-same-type-syntax.md
+  - `where` を使わずに制約を付けられる
+  - 例  
+    ```swift
+    protocol Graph<Vertex, Edge> { // !!!: ビルドエラーにならなくなった
+        associatedtype Vertex
+        associatedtype Edge
+    }
+    
+    // Before
+    func shortestPath<V, E, G>(_: G, from: V, to: V) -> [E] where G: Graph, G.Vertex == V, G.Edge == E
+    extension Graph where Vertex == Int, Edge == String { ... }
+    
+    // After
+    func shortestPath<V, E>(_: some Graph<V, E>, from: V, to: V) -> [E]
+    extension Graph<Int, String> { ... }
+    func build() -> some Graph<Int, String> { ... } // !!!: `where` を使って書けない
+    ```
 
 ## SwiftUI
 
