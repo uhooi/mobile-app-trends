@@ -233,11 +233,32 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - 例  
     ```swift
     func someDictionary() -> [some Hashable: some Codable] {
-        [ 1: "One", 2: "Two" ]
+        [1: "One", 2: "Two"]
     }
     ```
-- TBD
+- クロージャ内が複数の文でも引数と戻り値の型を推論できるようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md
+  - 例  
+    ```swift
+    func map<T>(fn: (Int) -> T) -> T {
+        fn(42)
+    }
+    
+    // 1つの文はSwift 5.6でも引数と戻り値を省略できる
+    _ = map { Double($0) }
+    
+    // 複数の文は引数と戻り値を明示する必要があった
+    _ = map { value -> Double in
+        print("Foo")
+        return Double(value)
+    }
+    
+    // Swift 5.7からは複数の文でも引数と戻り値を省略できる
+    _ = map {
+        print("Foo")
+        return Double($0)
+    }
+    ```
 - __`if-let` 構文を省略して書けるようになった__
   - https://github.com/apple/swift-evolution/blob/main/proposals/0345-if-let-shorthand.md
   - 例  
