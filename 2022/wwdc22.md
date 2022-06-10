@@ -159,7 +159,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
         return read_long(&x) // !!!: ビルドエラーにならなくなった
     }
     ```
-- プロトコルタイプの値を使用してジェネリック関数を呼び出すことができるようになった
+- プロトコルタイプの値を使ってジェネリック関数を呼び出すことができるようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0352-implicit-open-existentials.md
   - 例
     ```swift
