@@ -115,6 +115,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 ## Swift 5.7
 
+- https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
 - TBD
 
 ## SwiftUI
