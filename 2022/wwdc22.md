@@ -175,6 +175,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     }
     ```
 - __ジェネリック関数で引数にデフォルト値を指定できるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0347-type-inference-from-default-exprs.md
   - 例
     ```swift
     func compute<C: Collection>(_ values: C = [0, 1, 2]) { // !!!: ビルドエラーにならなくなった
