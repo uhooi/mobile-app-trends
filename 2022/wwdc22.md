@@ -393,6 +393,7 @@ TBD
 ### セッション
 
 - [WWDC22 Monday recap](https://developer.apple.com/videos/play/wwdc2022/110929/)
+- [What's new in Xcode](https://developer.apple.com/videos/play/wwdc2022/110427/)
 
 ### 非公式
 
