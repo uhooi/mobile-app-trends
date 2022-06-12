@@ -128,42 +128,22 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
 - https://github.com/apple/swift/blob/6cc83594604e1a11f3bdece5ad6a4370e8c0dee3/CHANGELOG.md#swift-57
-- 標準ライブラリに `Regex<Output>` 型と正規表現リテラル、新しい文字列処理アルゴリズムが追加された
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0355-regex-syntax-run-time-construction.md
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0357-regex-string-processing-algorithms.md
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0350-regex-type-overview.md
+
+### 全般
+
+- __`if-let` 構文を省略して書けるようになった__
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0345-if-let-shorthand.md
   - 例  
     ```swift
-    // Initialization from a string
-    let pattern = "a[bc]+"
-    let regex = try! Regex(pattern)
+    // Before
+    if let foo = foo { ... }
     
-    // Regex literal
-    let regex = #/a[bc]+/#
+    // After
+    if let foo { ... }
     ```
-- 新しく追加された正規表現リテラルに対して「ベアスラッシュ」構文を有効にする
-  - 既存のコードがコンパイルされない可能性がある
-  - プロジェクトのビルド設定にある「Enable Bare Slash Regex Literals」チェック（ `SWIFT_ENABLE_BARE_SLASH_REGEX = NO` ）をOFFにして無効にすることもできる
-- 多くのトップレベルの位置に書き込まれたプレースホルダータイプのタイプを推測できるようになった
-  - 例
-    ```swift
-    func replaceMe() -> _ {
-        [42]
-    }
-    ```
-- `inout` からC言語のポインタへの変換がビルドエラーにならなくなった
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0324-c-lang-pointer-arg-conversion.md
-  - 例
-    ```swift
-    // C declaration:
-    // long read_long(const char *input);
-    
-    func test() -> Int {
-        var x = 3
-        return read_long(&x) // !!!: ビルドエラーにならなくなった
-    }
-    ```
+
+### ジェネリクス
+
 - プロトコルタイプの値を使ってジェネリック関数を呼び出すことができるようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0352-implicit-open-existentials.md
   - 例
@@ -269,16 +249,9 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
         return Double($0)
     }
     ```
-- __`if-let` 構文を省略して書けるようになった__
-  - https://github.com/apple/swift-evolution/blob/main/proposals/0345-if-let-shorthand.md
-  - 例  
-    ```swift
-    // Before
-    if let foo = foo { ... }
-    
-    // After
-    if let foo { ... }
-    ```
+
+### Swift Concurrency
+
 - `@available(*, noasync)` 属性が追加された
   - https://github.com/apple/swift-evolution/blob/main/proposals/0340-swift-noasync.md
   - 非同期コンテキストから宣言を使えない
@@ -294,6 +267,51 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 - `actor` のイニシャライザ内でストアドプロパティへの危険なアクセスをコンパイラがチェックするようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0327-actor-initializers.md
   - TBD
+
+### 正規表現
+
+- 標準ライブラリに `Regex<Output>` 型と正規表現リテラル、新しい文字列処理アルゴリズムが追加された
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0355-regex-syntax-run-time-construction.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0357-regex-string-processing-algorithms.md
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0350-regex-type-overview.md
+  - 例  
+    ```swift
+    // Initialization from a string
+    let pattern = "a[bc]+"
+    let regex = try! Regex(pattern)
+    
+    // Regex literal
+    let regex = #/a[bc]+/#
+    ```
+- 新しく追加された正規表現リテラルに対して「ベアスラッシュ」構文を有効にする
+  - 既存のコードがコンパイルされない可能性がある
+  - プロジェクトのビルド設定にある「Enable Bare Slash Regex Literals」チェック（ `SWIFT_ENABLE_BARE_SLASH_REGEX = NO` ）をOFFにして無効にすることもできる
+- 多くのトップレベルの位置に書き込まれたプレースホルダータイプのタイプを推測できるようになった
+  - 例
+    ```swift
+    func replaceMe() -> _ {
+        [42]
+    }
+    ```
+
+### C言語
+
+- `inout` からC言語のポインタへの変換がビルドエラーにならなくなった
+  - https://github.com/apple/swift-evolution/blob/main/proposals/0324-c-lang-pointer-arg-conversion.md
+  - 例
+    ```swift
+    // C declaration:
+    // long read_long(const char *input);
+    
+    func test() -> Int {
+        var x = 3
+        return read_long(&x) // !!!: ビルドエラーにならなくなった
+    }
+    ```
+
+### その他
+
 - 時間と時計を表す型が追加された
   - https://github.com/apple/swift-evolution/blob/main/proposals/0329-clock-instant-duration.md
   - 時計を表す `Clock` プロトコル
