@@ -128,6 +128,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 
 - https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes
 - https://github.com/apple/swift/blob/6cc83594604e1a11f3bdece5ad6a4370e8c0dee3/CHANGELOG.md#swift-57
+- https://developer.apple.com/videos/play/wwdc2022/110354/
 
 ### 全般
 
