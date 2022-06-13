@@ -74,7 +74,7 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
   - `RECOMMENDED_WATCHOS_DEPLOYMENT_TARGET`
   - `RECOMMENDED_DRIVERKIT_DEPLOYMENT_TARGET`
 - `ENABLE_USER_SCRIPT_SANDBOXING` ビルド設定が追加された
-  - shell script build phasesでサンドボックス化できるようになった
+  - build phasesのスクリプトをサンドボックス化できるようになった
   - ファイルアクセスをホワイトリスト化する
 - legacy build systemが削除された
 - 以下のアーキテクチャ用のデプロイメントターゲットを使ったiOSプロジェクトのビルドをサポートしなくなった
