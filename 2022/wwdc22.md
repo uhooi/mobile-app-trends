@@ -67,7 +67,6 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
 - `FUSE_BUILD_SCRIPT_PHASES` ビルド設定が追加された
   - 異なるビルドフェーズからタスクを並行して実行する
   - 入出力の依存関係が順序を強制しない場合に使う
-  - run script build phasesで指定する
 - 推奨する最小デプロイメントターゲットのビルド設定が追加された  
   - `RECOMMENDED_MACOSX_DEPLOYMENT_TARGET`
   - `RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET`
