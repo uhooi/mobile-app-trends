@@ -138,9 +138,11 @@ WWDC22（06/06 - 06/10）の発表内容を紹介します。
     ```swift
     // Before
     if let foo = foo { ... }
+    guard let bar = bar else { ... } 
     
     // After
     if let foo { ... }
+    guard let bar else { ... }
     ```
 - クロージャ内が複数の文でも引数と戻り値の型を推論できるようになった
   - https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md
