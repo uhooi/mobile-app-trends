@@ -391,7 +391,13 @@ TBD
 
 ## 参考リンク
 
-### セッション
+### 公式
+
+#### 全般
+
+- https://developer.apple.com/documentation/New-Technologies-WWDC22
+
+#### セッション
 
 - [WWDC22 Monday recap](https://developer.apple.com/videos/play/wwdc2022/110929/)
 - [What's new in Xcode](https://developer.apple.com/videos/play/wwdc2022/110427/)
